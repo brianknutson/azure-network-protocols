@@ -20,12 +20,12 @@ This demonstration I will observe various network traffic to and from Azure Virt
 
 <h2>High-Level Steps</h2>
 
-- Step 1
+- Creating the Resource Group and Virtual Machines 
 - Step 2
 - Step 3
 - Step 4
 
-<h2>Actions and Observations</h2>
+<h2>Creating the Resource Group and Virtual Machines </h2>
 
 Step 1
 ------
@@ -102,6 +102,12 @@ I went into “WindowsTwo” VM to check the “Virtual network/subnet”, which
 Then I went into “WindowsVM” to check the “Virtual network/subnet”, which was “Lab2Vnet/snet eastus-1”, showing they both have the same vnet. 
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.2.png)
+
+
+<h2>Actions and Observations</h2>
+
+Step 1
+------
 ![image alt]()
 ![image alt]()
 ![image alt]()
