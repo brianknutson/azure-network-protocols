@@ -32,6 +32,31 @@ Step 1
 ------
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/1.0.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/1.1.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/1.2.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/1.3.png)
+
+Step 2
+------
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.0.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.1.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.2.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.3.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.4.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.5.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.6.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.7.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/2.8.png)
+
+Step 3
+------
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.0.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.1.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.2.png)
+![image alt]()
 ![image alt]()
 ![image alt]()
 ![image alt]()
