@@ -89,13 +89,13 @@ I went into the resource group “Networking_Activities”, and I saw all the ne
 
 Step 3
 ------
-I created another VM named “WindowsTwo” using the same process except for one thing. Instead of creating a new virtual network, I used the virtual network I created called “Lab2Vnet”. 
+I created another VM named “LinuxVM” using the same process except for two thing. First, the "image" I choose was a Ubuntu Server x64, which is a Linux os. Second, instead of creating a new virtual network, I used the virtual network I created called “Lab2Vnet”. 
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.0.png)
 
 I wanted to ensure that both VMs were in the same virtual network so that they would be able to communicate more privately, securely, and efficiently. 
 
-I went into “WindowsTwo” VM to check the “Virtual network/subnet”, which was “Lab2Vnet/snet eastus-1”. 
+I went into “LinuxVM” to check the “Virtual network/subnet”, which was “Lab2Vnet/snet eastus-1”. 
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.1.png)
 
