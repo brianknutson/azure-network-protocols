@@ -104,11 +104,12 @@ Then I went into “WindowsVM” to check the “Virtual network/subnet”, whic
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.2.png)
 
 
-<h2>Actions and Observations</h2>
+<h2>Wireshark</h2>
 
 Step 1
 ------
-![image alt]()
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/6e43a4fcf119d0bf0274436683e7a0321f2d255e/4.0.png)
 ![image alt]()
 ![image alt]()
 ![image alt]()
