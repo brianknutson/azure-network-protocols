@@ -111,41 +111,51 @@ Step 1 - Downloading Wireshark
 In order to get on the VM, I need to use Remote Desktop, which is a technology that allows a user to access and control another computer over the internet or network. 
 
 I simply search for Remote Desktop in the search bar for the program. Then I put in the public IP address of the Windows VM, and then the credentials. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/6e43a4fcf119d0bf0274436683e7a0321f2d255e/4.0.png)
 
 In order to observe traffic over a computer network, I need to download Wireshark. Wireshark is an open-source network protocol analyzer that allows users to capture and observe traffic running on a computer network. 
 
 I went to the Wireshark website to download the program. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.1.png)
 
 Since I am using a Windows operating system, I chose the “Windows x64 Installer” for the download. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.2.png)
 
 After the download was finished, I opened the file, and then I clicked “Next”. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.3.png)
 
 I continued to click “Next”, choosing to check the default options. Finally, I pressed “Install”. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.4.png)
 
 The Npcap is a program needed for Wireshark to function, and its download file appears to have it download.
 
 I just installed it.  
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.5.png)
 
 After both programs’ downloads are complete, I click on “Finish”.   
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.6.png)
 
 Step 2 - Observing Packets within Wireshark
 ------
 I opened the Wireshark program, clicked on “Ethernet”, and then the blue fin icon to start observing packets. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.7.png)
 
 I wanted to check for ICMP traffic with Wireshark, so I filtered for ICMP in the top bar. ICMP traffic is what ping uses. The ping command is used to test the connectivity between two devices.
 
 Because I haven’t used the ping command yet, no traffic is shown. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.8.png)
 
 Using the  SecureShell program, I pinged the “LinuxVM” using its private IP address. Because there is a 0% loss, all packets were received, meaning the two VMs can connect. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.9.png)
 
 Because I just used the ping command, I can now observe ICMP in Wireshark. 
@@ -155,15 +165,19 @@ The reason why Wireshark shows 8 events instead of PowerShell’s 4 events is th
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.91.png)
 
 Next, I will do a perpetual ping from the “WindowsVM” to the “LinuxVM”, using the command “ping 172.16.0.6 -t”. The string of numbers is the private IP address of the Linux VM.
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.92.png)
 
 Now, within Wireshark, there is a repeat of ICMP traffic due to the perpetual ping from the “WindowsVM” to the “LinuxVM”. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.923.png)
 
 To achieve this, I needed to go into Microsoft Azure and then into the Network settings of the Linux VM. After I had to press “LinuxVM-nsg”. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.93.png)
 
 Next, I went to “Inbound security rules”, and after I clicked on “Add” to make an inbound security rule to stop incoming ICMP traffic. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/5.0.png)
 
 For the destination port ranges, I put in * because it means any port in this case. 
@@ -176,13 +190,29 @@ Finally, I clicked on "Add".
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/5.1.png)
 
+Now the “DenyPing” rule is created and is applied. 
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/5.2.png)
-![image alt]()
-![image alt]()
-![image alt]()
-![image alt]()
-![image alt]()
+
+Going back to the Windows VM’s SecureShell, there are now timed-out requests due to the newly created inbound rule to stop ICMP traffic. 
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4720d065486562376b357267f797b5d862fb8ff3/5.3.png)
+
+Also, within the Windows VM, Wireshark shows ICMP traffic with no response found because of the new inbound traffic rule on the Linux VM. 
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4720d065486562376b357267f797b5d862fb8ff3/5.4.png)
+
+Next, within Microsoft Azure, I deleted the “DenyPing” rule, so ICMP traffic will be allowed for the Linux VM. 
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4720d065486562376b357267f797b5d862fb8ff3/5.5.png)
+
+Because I deleted the “DenyPing” rule, the SecureShell on the Windows VM shows a continue stream of replies instead of the request timed out, meaning the Linux VM is now accepting ICMP traffic once again. 
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4720d065486562376b357267f797b5d862fb8ff3/5.6.png)
+
+Finally, Wireshark on the Windows VM shows a similar trend. Because of the deletion of the “DenyPing” rule, there are requests and replies from the Windows VM and Linux VM, respectively, for ICMP traffic. 
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4720d065486562376b357267f797b5d862fb8ff3/5.7.png)
 ![image alt]()
 ![image alt]()
 ![image alt]()
