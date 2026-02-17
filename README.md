@@ -104,10 +104,8 @@ Then I went into “WindowsVM” to check the “Virtual network/subnet”, whic
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/550aa3850bd128f0b3ab9d6bdb60d8d4832a4fdb/3.2.png)
 
 
-<h2>Wireshark</h2>
+<h2>Downloading Wireshark</h2>
 
-Step 1 - Downloading Wireshark
-------
 In order to get on the VM, I need to use Remote Desktop, which is a technology that allows a user to access and control another computer over the internet or network. 
 
 I simply search for Remote Desktop in the search bar for the program. Then I put in the public IP address of the Windows VM, and then the credentials. 
@@ -141,6 +139,7 @@ I just installed it.
 After both programs’ downloads are complete, I click on “Finish”.   
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.6.png)
+
 
 <h2>Observing Packets with Wireshark</h2>
 
