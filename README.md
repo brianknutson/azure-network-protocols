@@ -142,7 +142,9 @@ After both programs’ downloads are complete, I click on “Finish”.
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/87a25e20c2725876e4d509e2c0c73ac4acbf6a79/4.6.png)
 
-Step 2 - Observing Packets within Wireshark
+<h2>Observing Packets with Wireshark</h2>
+
+Step 1 - Configuring a Firewall (Network Security Group) and Observing ICMP Traffic 
 ------
 I opened the Wireshark program, clicked on “Ethernet”, and then the blue fin icon to start observing packets. 
 
@@ -213,6 +215,19 @@ Because I deleted the “DenyPing” rule, the SecureShell on the Windows VM sho
 Finally, Wireshark on the Windows VM shows a similar trend. Because of the deletion of the “DenyPing” rule, there are requests and replies from the Windows VM and Linux VM, respectively, for ICMP traffic. 
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4720d065486562376b357267f797b5d862fb8ff3/5.7.png)
+
+Step 2 - Observe Secure Shell (SSH) Traffic 
+------
+
+Step 3 - Observe Dynamic Host Configuration Protocol (DHCP) Traffic 
+------
+
+Step 4 - Observe Domain Name System (DNS) Traffic 
+------
+
+Step 5 - Observe Remote Desktop Protocol (RDP) Traffic
+------
+
 ![image alt]()
 ![image alt]()
 ![image alt]()
