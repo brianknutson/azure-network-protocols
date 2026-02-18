@@ -218,21 +218,31 @@ Finally, Wireshark on the Windows VM shows a similar trend. Because of the delet
 Step 2 - Observe Secure Shell (SSH) Traffic 
 ------
 
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.0.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.1.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.3.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.4.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.5.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.6.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.7.png)
+
 Step 3 - Observe Dynamic Host Configuration Protocol (DHCP) Traffic 
 ------
+
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.0.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.1.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.2.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.3.png)
+
 
 Step 4 - Observe Domain Name System (DNS) Traffic 
 ------
 
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/8.0.png)
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/8.1.png)
+
 Step 5 - Observe Remote Desktop Protocol (RDP) Traffic
 ------
 
-![image alt]()
-![image alt]()
-![image alt]()
-![image alt]()
-![image alt]()
-![image alt]()
-![image alt]()
-![image alt]()
+![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/9.0.png)
 
