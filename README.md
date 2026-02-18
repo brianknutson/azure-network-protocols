@@ -217,13 +217,40 @@ Finally, Wireshark on the Windows VM shows a similar trend. Because of the delet
 
 Step 2 - Observe Secure Shell (SSH) Traffic 
 ------
+Now, I will observe for SSH traffic with Wireshark, so I filtered for SSH in the top bar. SSH is a network protocol used to access a remote device securely. 
+
+Because I didn’t connect to another remote device on the Windows VM, there is no traffic shown. 
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.0.png)
+
+Opening PowerShell, I typed ssh labuser@172.0.16.6, where the number is the private IP address of the Linux VM. 
+
+Wireshark now showed SSN traffic, since I was using the SSH command to remotely access another device. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.1.png)
+
+After confirming  I wanted to access the Linux VM, I entered the password for the Linux VM, giving me a welcoming script and some details of the system. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.3.png)
+
+I typed the following command "id" to see the id of the current user using the Linux VM; in this case, the user is "labuser". 
+
+After I used the command "hostname", to tell me that the current device is named "LinuxVM". 
+
+Finally, I used the command "uname -a", which tells me basic information about the system, such as the OS name, hostname, and kernel version. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.4.png)
+
+With every command, Wireshark is capturing the SSH traffic. Even a single keystroke in PowerShell is traffic that can be captured. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.5.png)
+
+I used the "exit" command to end the connection to the Linux VM. To confirm, I used the "hostname" command to see what device I was actively on, which was then the Windows VM. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.6.png)
+
+I also checked Wireshark to see the reset packet that was sent, which was highlighted red. This reset packet tells us that the connection was ended. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/6.7.png)
 
 Step 3 - Observe Dynamic Host Configuration Protocol (DHCP) Traffic 
