@@ -17,7 +17,7 @@ This demonstration I will observe various network traffic to and from Azure Virt
 <h2>Operating Systems Used </h2>
 
 - Windows 11 Pro (21H2)
-- Ubuntu Server 24.04 LTS -x64 Gen2
+- Ubuntu Server 24.04 LTS -x64 Gen2 (Linux) 
 
 <h2>High-Level Steps</h2>
 
