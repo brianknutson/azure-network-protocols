@@ -255,10 +255,33 @@ I also checked Wireshark to see the reset packet that was sent, which was highli
 
 Step 3 - Observe Dynamic Host Configuration Protocol (DHCP) Traffic 
 ------
+Next, I will observe for DHCP traffic with Wireshark, so I filtered for DHCP in the top bar. DHCP is a protocol where a system automatically gives devices an IP address when they connect to a network.
+
+There's no DHCP traffic shown because the protocol hasn't run yet.
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.0.png)
+
+Before I went into PowerShell, I needed to make a simple script so that it would allow Wireshark to capture all the packets I needed. 
+
+I opened Notepad and made the following script:
+
+ipconfig /release
+ipconfig /renew
+
+The "ipconfig /release" is a command that will release the Windows VM IP address, meaning the VM won't have an IP address. However, the following command "ipconfig /renew" will ask the DHCP server to give the device an IP address. 
+
+If I just used the command "ipconfig /release", the VM would automatically try to ask the DHCP server for an IP address. Normally, this would be fine, but for a reason I don't know, Wireshark doesn't capture all the packets for DHCP, which is why I needed the script. 
+
+I saved the file in the "ProgramData" folder in the C drive, naming the file "dhcp.bat". 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.1.png)
+
+In PowerShell, I used the command "cd c:\programdata" to get to that directory to run the newly created file - dhcp.bat. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.2.png)
+
+Finally, I used the following command ".\dhcp.bat" to run the file. Because the script gave commands to run DHCP, Wireshark was able to capture all its packets, showing all the steps of that protocol. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/7.3.png)
 
 
