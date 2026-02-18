@@ -17,15 +17,16 @@ This demonstration I will observe various network traffic to and from Azure Virt
 <h2>Operating Systems Used </h2>
 
 - Windows 11 Pro (21H2)
+- Ubuntu Server 24.04 LTS -x64 Gen2
 
 <h2>High-Level Steps</h2>
 
 - Creating the Resource Group and Virtual Machines 
-- Step 2
-- Step 3
-- Step 4
+- Downloading Wireshark
+- Observing Packets with Wireshark
 
 <h2>Creating the Resource Group and Virtual Machines </h2>
+
 
 Step 1 - Creating the Resource Group 
 ------
