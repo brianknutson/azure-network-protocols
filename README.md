@@ -287,12 +287,21 @@ Finally, I used the following command ".\dhcp.bat" to run the file. Because the 
 
 Step 4 - Observe Domain Name System (DNS) Traffic 
 ------
+The following traffic I wanted to observe is the DNS protocol, which is a protocol that translates a website name into a IP address.
+
+Because I haven't given PowerShell a command related to the DNS protocol and filtered for DNS traffic, no traffic is shown. 
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/8.0.png)
+
+I used the command "nslookup disney.com" in PowerShell. The response gave me the Disney website's IP address, and within Wireshark, DNS traffic is shown. 
+
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/8.1.png)
 
 Step 5 - Observe Remote Desktop Protocol (RDP) Traffic
 ------
+The final traffic I wanted to observe is RDP traffic. RDP is a network protocol that allows a user to remotely access and control another device over a network connection. 
+
+Because I have access to the Windows VM using RDP and RDP needs to be continuously running for me to access the VM, Wireshark is constantly capturing packets related to RDP. Even moving the mouse within the VM is sending packets to Wireshark.  
 
 ![image alt](https://github.com/brianknutson/azure-network-protocols/blob/4031796df3927e9452d5b05f209618ae7738aabb/9.0.png)
 
